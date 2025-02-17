@@ -61,16 +61,16 @@ int main() {
     std::cout << "Created list10" << std::endl;
 
     // Test lists
-    test_list(list1, list2, list 3);
-    test_list(list2, list3, list 4);
-    test_list(list3, list4, list 5);
-    test_list(list4, list5, list 6);
-    test_list(list5, list6, list 7);
-    test_list(list6, list7, list 8);
-    test_list(list7, list8, list 9);
-    test_list(list8, list9, list 10);
-    test_list(list9, list10, list 1);
-    test_list(list10, list1, list 2);
+    test_list(list1, list2, list3);
+    test_list(list2, list3, list4);
+    test_list(list3, list4, list5);
+    test_list(list4, list5, list6);
+    test_list(list5, list6, list7);
+    test_list(list6, list7, list8);
+    test_list(list7, list8, list9);
+    test_list(list8, list9, list10);
+    test_list(list9, list10, list1);
+    test_list(list10, list1, list2);
 
     // Clean up memory
     delete list1;
