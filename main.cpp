@@ -1,36 +1,36 @@
 #include <iostream>
 #include <list>
 
-void test_list(std::list<int>* myList) {
-    // Assign values to myList
-    myList->assign({1, 2, 3, 4, 5});
-    std::cout << "myList after assign: ";
-    for (int val : *myList) {
+void test_list(std::list<int>* myListA, std::list<int>* myListB, std::list<int>* myListC) {
+    // Assign values to myListA
+    myListA->assign({1, 2, 3, 4, 5});
+    std::cout << "myListA after assign: ";
+    for (int val : *myListA) {
         std::cout << val << " ";
     }
     std::cout << std::endl;
 
-    // Clear myList
-    myList->clear();
-    std::cout << "myList after clear: " << (myList->empty() ? "empty" : "not empty") << std::endl;
+    // Clear myListA
+    myListA->clear();
+    std::cout << "myListA after clear: " << (myListA->empty() ? "empty" : "not empty") << std::endl;
 
-    // Assign values to myList and myList
-    myList->assign({6, 7, 8});
-    myList->assign({9, 10, 11});
+    // Assign values to myListA and myListB
+    myListA->assign({6, 7, 8});
+    myListB->assign({9, 10, 11});
 
-    // Merge myList and myList into myList
-    myList->assign(myList->begin(), myList->end());
-    myList->merge(*myList);
-    std::cout << "myList after merge: ";
-    for (int val : *myList) {
+    // Merge myListA and myListB into myListC
+    myListC->assign(myListA->begin(), myListA->end());
+    myListC->merge(*myListB);
+    std::cout << "myListC after merge: ";
+    for (int val : *myListC) {
         std::cout << val << " ";
     }
     std::cout << std::endl;
 
-    // Resize myList
-    myList->resize(5, 0);
-    std::cout << "myList after resize: ";
-    for (int val : *myList) {
+    // Resize myListC
+    myListC->resize(5, 0);
+    std::cout << "myListC after resize: ";
+    for (int val : *myListC) {
         std::cout << val << " ";
     }
     std::cout << std::endl;
@@ -61,16 +61,16 @@ int main() {
     std::cout << "Created list10" << std::endl;
 
     // Test lists
-    test_list(list1);
-    test_list(list2);
-    test_list(list3);
-    test_list(list4);
-    test_list(list5);
-    test_list(list6);
-    test_list(list7);
-    test_list(list8);
-    test_list(list9);
-    test_list(list10);
+    test_list(list1, list2, list 3);
+    test_list(list2, list3, list 4);
+    test_list(list3, list4, list 5);
+    test_list(list4, list5, list 6);
+    test_list(list5, list6, list 7);
+    test_list(list6, list7, list 8);
+    test_list(list7, list8, list 9);
+    test_list(list8, list9, list 10);
+    test_list(list9, list10, list 1);
+    test_list(list10, list1, list 2);
 
     // Clean up memory
     delete list1;
